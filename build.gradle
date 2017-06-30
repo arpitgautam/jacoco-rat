@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+		testCompile group: 'junit', name: 'junit', version: '4.12'
+		testCompile group: 'org.jacoco', name: 'org.jacoco.agent', version: '0.7.9'
+
+
+}
+
+
+
+/*gradle.taskGraph.beforeTask {task -> 
+		if(task.name !="test"){
+			task.deleteAllActions()
+			println "Task $task.name is being rendered useless"
+		}
+    
+}*/
